@@ -4,6 +4,14 @@
 # Log file
 *.log
 
+# IntelliJ files
+.idea/
+out/
+
+# Eclipse files
+.classpath
+.project
+
 # BlueJ files
 *.ctxt
 
