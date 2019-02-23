@@ -8,17 +8,21 @@ public class Tester {
     public static void main(String[] args) {
 
         // ssRNA
-        SingleStrand<RNANucleotide> rna = new SingleStrand<>("AUGCAGC", RNANucleotide.class);
+        SingleStrand<RNANucleotide> rna    = new SingleStrand<>("AUGCAG", RNANucleotide.class);
+        SingleStrand<RNANucleotide> comp1  = rna.getComplementaryStrand();
 
-        System.out.println("rna  = " + rna);
-        System.out.println("comp = " + rna.getComplementaryStrand());
+        System.out.println("rna   = " + rna);
+        System.out.println("comp1 = " + comp1);
+        System.out.println("complements? " + (rna.complements(comp1)? "yes" : "no"));
         System.out.println();
 
         // ssDNA
-        SingleStrand<DNANucleotide> dna = new SingleStrand<>("GTCACGT", DNANucleotide.class);
+        SingleStrand<DNANucleotide> dna    = new SingleStrand<>("GTCACG", DNANucleotide.class);
+        SingleStrand<DNANucleotide> comp2  = dna.getComplementaryStrand();
 
-        System.out.println("dna  = " + dna);
-        System.out.println("comp = " + dna.getComplementaryStrand());
+        System.out.println("dna   = " + dna);
+        System.out.println("comp2 = " + comp2);
+        System.out.println("complements? " + (dna.complements(comp2)? "yes" : "no"));
         System.out.println();
 
         // dsRNA (1 input)
