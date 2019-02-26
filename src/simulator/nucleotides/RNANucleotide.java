@@ -6,12 +6,12 @@ import java.util.HashMap;
 @SuppressWarnings({"unused", "WeakerAccess"})
 public class RNANucleotide extends Nucleotide {
 
-    private static final Map<Base, Base> PAIRS = new HashMap<>();
-
-    static {
-        PAIRS.put(Base.A, Base.U); PAIRS.put(Base.U, Base.A);
-        PAIRS.put(Base.C, Base.G); PAIRS.put(Base.G, Base.C);
-    }
+    private static final Map<Base, Base> PAIRS = new HashMap<>() {
+        {
+            put(Base.A, Base.U); put(Base.U, Base.A);
+            put(Base.C, Base.G); put(Base.G, Base.C);
+        }
+    };
 
     public RNANucleotide(Base base) {
         super(base);
